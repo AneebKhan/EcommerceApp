@@ -13,6 +13,10 @@ class CustomTexts {
   static const String onBoardingSubTitle2 = "For seamless transactions, choose your payment path - your convenience is our priority!";
   static const String onBoardingSubTitle3 = "From our doorsteps to yours - swift, secure and contactless delivery!";
 
+  // Login
+  static const String loginTitle = "Welcome back,";
+  static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience";
+
   // Home
   static const String homeAppBarTitle = "Good day for shopping";
   static const String homeAppBarSubTitle = "Aneebian";
