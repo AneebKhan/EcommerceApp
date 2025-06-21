@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class CustomImages {
 
   // App Logos
-  static const String darkAppLogo = "assets/logos/logo_dark.png";
-  static const String lightAppLogo = "assets/logos/logo_light.png";
+  static const String darkAppLogo = "assets/logos/logo_dark.jpg";
+  static const String lightAppLogo = "assets/logos/logo_light.jpg";
 
   // Social logos
-  static const String facebook = "assets/logos/facebook.svg";
+  static const String facebook = "assets/logos/facebook_logo.png";
   static const String twitter = "assets/logos/twitter.svg";
   static const String instagram = "assets/logos/instagram.svg";
-  static const String google = "assets/logos/google.svg";
+  static const String google = "assets/logos/google_logo.png";
 
   // OnBoarding Images
   static const String onBoardingImage1 = "assets/images/on_boarding_images/scooter_2.gif";

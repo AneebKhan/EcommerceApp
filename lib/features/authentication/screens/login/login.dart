@@ -1,16 +1,18 @@
 import 'package:ecommerce_app/common/styles/spacing_styles.dart';
+import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/constants/image_strings.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:ecommerce_app/utils/constants/text_strings.dart';
 import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     final dark = CustomHelperFunctions.isDarkMode(context);
 
     return Scaffold(
@@ -25,13 +27,135 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   Image(
                     height: 150,
-                    image: AssetImage(dark ? CustomImages.lightAppLogo : CustomImages.darkAppLogo),
+                    image: AssetImage(
+                      dark
+                          ? CustomImages.lightAppLogo
+                          : CustomImages.darkAppLogo,
+                    ),
                   ),
-                  Text(CustomTexts.loginTitle, style: Theme.of(context).textTheme.headlineMedium),
                   SizedBox(height: CustomSizes.sm),
-                  Text(CustomTexts.loginSubTitle, style: Theme.of(context).textTheme.bodyMedium),
+                  Text(
+                    CustomTexts.loginTitle,
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  SizedBox(height: CustomSizes.sm),
+                  Text(
+                    CustomTexts.loginSubtitle,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 ],
-              )
+              ),
+
+              /// Form
+              Form(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: CustomSizes.spaceBtwSections),
+                  child: Column(
+                    children: [
+                      /// Email
+                      TextFormField(
+                        decoration: InputDecoration(
+                          prefixIcon: Icon(Iconsax.direct_right),
+                          labelText: CustomTexts.email,
+                        ),
+                      ),
+                      SizedBox(height: CustomSizes.spaceBtwInputFields),
+
+                      /// Password
+                      TextFormField(
+                        decoration: InputDecoration(
+                          prefixIcon: Icon(Iconsax.password_check),
+                          labelText: CustomTexts.password,
+                          suffixIcon: Icon(Iconsax.eye_slash),
+                        ),
+                      ),
+                      SizedBox(height: CustomSizes.spaceBtwInputFields / 2),
+                    ],
+                  ),
+                ),
+              ),
+
+              /// Remember Me and Forgot Password
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  /// Remember Me
+                  Row(
+                    children: [
+                      Checkbox(value: true, onChanged: (value) {}),
+                      Text(CustomTexts.rememberMe),
+                    ],
+                  ),
+
+                  /// Forgot Password
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(CustomTexts.forgotPassword),
+                  ),
+                ],
+              ),
+              SizedBox(height: CustomSizes.spaceBtwSections),
+
+              /// Sign In Button
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text(CustomTexts.signIn),
+                ),
+              ),
+              SizedBox(height: CustomSizes.spaceBtwItems),
+
+              /// Create Account Button
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton(
+                  onPressed: () {},
+                  child: Text(CustomTexts.createAccount),
+                ),
+              ),
+              SizedBox(height: CustomSizes.spaceBtwSections),
+
+              /// Divider
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(child: Divider(color: dark ? CustomColors.darkGrey : CustomColors.grey, thickness: 0.5, indent: 60, endIndent: 5)),
+                  Text(CustomTexts.orSignInWith.capitalize!, style: Theme.of(context).textTheme.labelMedium),
+                  Flexible(child: Divider(color: dark ? CustomColors.darkGrey : CustomColors.grey, thickness: 0.5, indent: 5, endIndent: 60)),
+                ],
+              ),
+              const SizedBox(height: CustomSizes.spaceBtwSections),
+
+              /// Footer
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(border: Border.all(color: CustomColors.grey), borderRadius: BorderRadius.circular(100)),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Image(
+                        width: CustomSizes.iconMd,
+                        height: CustomSizes.iconMd,
+                        image: AssetImage(CustomImages.google),
+                      ), // Image
+                    ), // IconButton
+                  ), // Container
+                  const SizedBox(width: CustomSizes.spaceBtwItems),
+                  Container(
+                    decoration: BoxDecoration(border: Border.all(color: CustomColors.grey), borderRadius: BorderRadius.circular(100)),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Image(
+                        width: CustomSizes.iconMd,
+                        height: CustomSizes.iconMd,
+                        image: AssetImage(CustomImages.facebook),
+                      ), // Image
+                    ), // IconButton
+                  ), // Container
+                ],
+              ),
             ],
           ),
         ),
