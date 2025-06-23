@@ -1,4 +1,6 @@
 import 'package:ecommerce_app/common/styles/spacing_styles.dart';
+import 'package:ecommerce_app/common/widgets/login_signup/form_divider.dart';
+import 'package:ecommerce_app/common/widgets/login_signup/social_buttons.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/constants/image_strings.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
@@ -117,45 +119,11 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: CustomSizes.spaceBtwSections),
 
               /// Divider
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Flexible(child: Divider(color: dark ? CustomColors.darkGrey : CustomColors.grey, thickness: 0.5, indent: 60, endIndent: 5)),
-                  Text(CustomTexts.orSignInWith.capitalize!, style: Theme.of(context).textTheme.labelMedium),
-                  Flexible(child: Divider(color: dark ? CustomColors.darkGrey : CustomColors.grey, thickness: 0.5, indent: 5, endIndent: 60)),
-                ],
-              ),
+              CustomFormDivider(dividerText: CustomTexts.orSignInWith.capitalize!),
               const SizedBox(height: CustomSizes.spaceBtwSections),
 
               /// Footer
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(border: Border.all(color: CustomColors.grey), borderRadius: BorderRadius.circular(100)),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Image(
-                        width: CustomSizes.iconMd,
-                        height: CustomSizes.iconMd,
-                        image: AssetImage(CustomImages.google),
-                      ), // Image
-                    ), // IconButton
-                  ), // Container
-                  const SizedBox(width: CustomSizes.spaceBtwItems),
-                  Container(
-                    decoration: BoxDecoration(border: Border.all(color: CustomColors.grey), borderRadius: BorderRadius.circular(100)),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Image(
-                        width: CustomSizes.iconMd,
-                        height: CustomSizes.iconMd,
-                        image: AssetImage(CustomImages.facebook),
-                      ), // Image
-                    ), // IconButton
-                  ), // Container
-                ],
-              ),
+              CustomSocialButtons(),
             ],
           ),
         ),
