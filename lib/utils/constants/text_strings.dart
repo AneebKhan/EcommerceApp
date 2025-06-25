@@ -32,6 +32,7 @@ class CustomTexts {
   static const String orSignInWith = "Or sign in with";
   static const String orSignUpWith = "Or sign up with";
   static const String iAgreeTo = "I agree to";
+  static const String and = "&";
   static const String privacyPolicy = "Privacy Policy";
   static const String termsOfUse = "Terms of Use";
   static const String verificationCode = "Verification Code";
