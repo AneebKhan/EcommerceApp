@@ -114,6 +114,7 @@ class SignUpScreen extends StatelessWidget {
                         ))
                       ],
                     ),
+
                     const SizedBox(height: CustomSizes.spaceBtwSections),
                     /// SignUp Button
                     SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () {}, child: Text(CustomTexts.createAccount)),)
