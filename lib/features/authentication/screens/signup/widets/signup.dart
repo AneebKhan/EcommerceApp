@@ -44,6 +44,7 @@ class SignUpScreen extends StatelessWidget {
                             decoration: const InputDecoration(labelText: CustomTexts.firstName, prefixIcon: Icon(Iconsax.user)),
                           ),
                         ),
+
                         const SizedBox(width: CustomSizes.spaceBtwInputFields),
                         Expanded(
                           child: TextFormField(
