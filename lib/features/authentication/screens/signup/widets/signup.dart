@@ -44,6 +44,7 @@ class SignUpScreen extends StatelessWidget {
                             decoration: const InputDecoration(labelText: CustomTexts.firstName, prefixIcon: Icon(Iconsax.user)),
                           ),
                         ),
+
                         const SizedBox(width: CustomSizes.spaceBtwInputFields),
                         Expanded(
                           child: TextFormField(
@@ -113,6 +114,7 @@ class SignUpScreen extends StatelessWidget {
                         ))
                       ],
                     ),
+
                     const SizedBox(height: CustomSizes.spaceBtwSections),
                     /// SignUp Button
                     SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () {}, child: Text(CustomTexts.createAccount)),)
