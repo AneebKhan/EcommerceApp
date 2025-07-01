@@ -31,11 +31,7 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   Image(
                     height: 150,
-                    image: AssetImage(
-                      dark
-                          ? CustomImages.lightAppLogo
-                          : CustomImages.darkAppLogo,
-                    ),
+                    image: AssetImage(dark ? CustomImages.lightAppLogo : CustomImages.darkAppLogo,),
                   ),
                   SizedBox(height: CustomSizes.sm),
                   Text(
