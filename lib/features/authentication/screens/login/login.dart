@@ -59,6 +59,7 @@ class LoginScreen extends StatelessWidget {
                           labelText: CustomTexts.email,
                         ),
                       ),
+
                       SizedBox(height: CustomSizes.spaceBtwInputFields),
 
                       /// Password
@@ -69,6 +70,7 @@ class LoginScreen extends StatelessWidget {
                           suffixIcon: Icon(Iconsax.eye_slash),
                         ),
                       ),
+
                       SizedBox(height: CustomSizes.spaceBtwInputFields / 2),
                     ],
                   ),
@@ -94,6 +96,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
+
               SizedBox(height: CustomSizes.spaceBtwSections),
 
               /// Sign In Button
@@ -104,6 +107,7 @@ class LoginScreen extends StatelessWidget {
                   child: Text(CustomTexts.signIn),
                 ),
               ),
+
               SizedBox(height: CustomSizes.spaceBtwItems),
 
               /// Create Account Button
@@ -114,10 +118,12 @@ class LoginScreen extends StatelessWidget {
                   child: Text(CustomTexts.createAccount),
                 ),
               ),
+
               SizedBox(height: CustomSizes.spaceBtwSections),
 
               /// Divider
               CustomFormDivider(dividerText: CustomTexts.orSignInWith.capitalize!),
+
               const SizedBox(height: CustomSizes.spaceBtwSections),
 
               /// Footer
