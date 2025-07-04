@@ -17,4 +17,7 @@ class CustomImages {
   static const String onBoardingImage2 = "assets/images/on_boarding_images/shopping_cart.gif";
   static const String onBoardingImage3 = "assets/images/on_boarding_images/sale.gif";
 
+  // Animations
+  static const String verifyEmailIllustration = "assets/images/on_boarding_images/verify_email.jpg";
+
 }
