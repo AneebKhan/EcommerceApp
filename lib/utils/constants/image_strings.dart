@@ -19,5 +19,6 @@ class CustomImages {
 
   // Animations
   static const String verifyEmailIllustration = "assets/images/on_boarding_images/verify_email.jpg";
+  static const String successIllustration = "assets/images/on_boarding_images/success_screen.jpg";
 
 }

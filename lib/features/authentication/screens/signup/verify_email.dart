@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/widgets/success_screen/success_screen.dart';
 import 'package:ecommerce_app/features/authentication/screens/login/login.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:ecommerce_app/utils/constants/text_strings.dart';
@@ -35,10 +36,12 @@ class VerifyEmailScreen extends StatelessWidget {
               Text('support@aneebian.com', style: Theme.of(context).textTheme.labelLarge, textAlign: TextAlign.center),
               const SizedBox(height: CustomSizes.spaceBtwItems),
               Text(CustomTexts.confirmEmailSubtitle, style: Theme.of(context).textTheme.labelMedium, textAlign: TextAlign.center),
-              const SizedBox(height: CustomSizes.spaceBtwItems),
+              const SizedBox(height: CustomSizes.spaceBtwSections),
               
               /// Buttons
-
+              SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () => Get.to(() => SuccessScreen()), child: Text(CustomTexts.continueText)),),
+              const SizedBox(height: CustomSizes.spaceBtwItems),
+              SizedBox(width: double.infinity, child: TextButton(onPressed: () {}, child: Text(CustomTexts.resendEmail)),),
             ],
           ),
         ),
