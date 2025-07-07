@@ -50,6 +50,7 @@ class CustomTexts {
   static const String confirmEmail = "Verify your email address!";
   static const String confirmEmailSubtitle = "Congratulations! Your account awaits: Verify Your Email To Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
   static const String emailNotReceivedMessage = "Didn't get the email? Check your spam/junk or resend it.";
+  static const String continueText = "Continue";
   static const String yourAccountCreatedTitle = "Your account successfully created!";
   static const String yourAccountCreatedSubtitle = "Welcome to Your Ultimate Shopping Destination! Your Account Is Created, Unleash The Joy Of Seamless Online Shopping!";
 
