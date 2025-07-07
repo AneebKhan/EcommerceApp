@@ -9,10 +9,10 @@ import '../../../utils/constants/text_strings.dart';
 import '../../../utils/helpers/helper_functions.dart';
 
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key});
+  const SuccessScreen({super.key, required this.image, required this.title, required this.subTitle, required this.onPressed});
 
-  /*final String image, title, subTitle;
-  final VoidCallback onPressed;*/
+  final String image, title, subTitle;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +22,17 @@ class SuccessScreen extends StatelessWidget {
             padding: CustomSpacingStyle.paddingWithAppBarHeight * 2,
           child: Column(
             children: [
-              Image(image: AssetImage(CustomImages.successIllustration), width: CustomHelperFunctions.screenWidth() * 0.6),
+              Image(image: AssetImage(image), width: CustomHelperFunctions.screenWidth() * 0.6),
               const SizedBox(height: CustomSizes.spaceBtwSections),
 
               /// Title & Sub Title
-              Text(CustomTexts.yourAccountCreatedTitle, style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
+              Text(title, style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
               const SizedBox(height: CustomSizes.spaceBtwItems),
-              Text(CustomTexts.yourAccountCreatedSubtitle, style: Theme.of(context).textTheme.labelMedium, textAlign: TextAlign.center),
+              Text(subTitle, style: Theme.of(context).textTheme.labelMedium, textAlign: TextAlign.center),
               const SizedBox(height: CustomSizes.spaceBtwSections),
 
               /// Button
-              SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () => Get.to(() => LoginScreen()), child: Text(CustomTexts.continueText))),
+              SizedBox(width: double.infinity, child: ElevatedButton(onPressed: onPressed, child: Text(CustomTexts.continueText))),
 
             ],
           ),
