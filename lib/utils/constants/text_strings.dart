@@ -53,5 +53,7 @@ class CustomTexts {
   static const String continueText = "Continue";
   static const String yourAccountCreatedTitle = "Your account successfully created!";
   static const String yourAccountCreatedSubtitle = "Welcome to Your Ultimate Shopping Destination! Your Account Is Created, Unleash The Joy Of Seamless Online Shopping!";
+  static const String submit = "Submit";
+  static const String done = "Done";
 
 }

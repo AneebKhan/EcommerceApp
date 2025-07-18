@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../password_configuration/forgot_password.dart';
 import '../signup/signup.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -91,7 +92,7 @@ class LoginScreen extends StatelessWidget {
 
                   /// Forgot Password
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => const ForgetPasswordScreen()),
                     child: Text(CustomTexts.forgotPassword),
                   ),
                 ],
