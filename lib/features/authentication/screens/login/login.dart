@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../navigation_menu.dart';
 import '../password_configuration/forgot_password.dart';
 import '../signup/signup.dart';
 
@@ -104,7 +105,7 @@ class LoginScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => NavigationMenu()),
                   child: Text(CustomTexts.signIn),
                 ),
               ),
